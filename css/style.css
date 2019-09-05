@@ -23,6 +23,10 @@ navbar
     margin-top: 3px;
   }
 }
+.toggle {
+  color: grey;
+}
+
 /*
 navbar
 */
