@@ -200,8 +200,13 @@ question summery
   .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
     color: #fff;
     background-color: #337ab7;
-    width: 190px;
+    width: 390px;
   }
 }
+/*
+==============================
+Performace by Category
+=============================
+*/
 
 /*# sourceMappingURL=style.css.map */
