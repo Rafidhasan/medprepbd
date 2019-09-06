@@ -278,4 +278,10 @@ question summery
         width: 350px;
         height: auto;
     }
+
+    .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+        color: #fff;
+        background-color: #337ab7;
+        width: 190px;
+    }
 }
