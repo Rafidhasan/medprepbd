@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>PrepsyspBD</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <span class="navbar-brand_med">Prep</span>
+                <span class="navbar-brand_prep">sys</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Review
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Question</a>
+                            <a class="dropdown-item" href="#">Key Concepts</a>
+                            <a class="dropdown-item" href="#">Facts</a>
+                            <a class="dropdown-item" href="#">Open The Text Book</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Performace
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <h6 class="dropdown-header">Question</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Summery</a>
+                            <a class="dropdown-item" href="#">By Category</a>
+                            <a class="dropdown-item" href="#">Overtime</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Facts</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Summery</a>
+                            <a class="dropdown-item" href="#">By Category</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Q&A</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="#">FAQs</a>
+                            <a class="dropdown-item" href="#">Contact us</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                My Account
+                                <br>
+                                <span class="text-muted">rafidahsan698@gmail.com</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" href="../index.html">Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--dashboard details section-->
+    <section class="section dashboard_detlais_section container mb-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="dash_primary_text">MRCP Part 1 revision</h3>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class=" nav-item ">
+                        <a href="#questions" class="nav-link active" data-toggle="tab">Questions</a>
+                    </li>
+                    <li class=" nav-item ">
+                        <a href="#timedtests" class="nav-link " data-toggle="tab">Timed
+                            <span class="hide-if-mobile"> test</span>
+                        </a>
+                    </li>			 
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" role="tabpanel" id="questions">
+                        <form name="selecttest" id="selecttest" class="form-horizontal" role="form" method="POST" action="/menu/menu.php">
+                            <br>
+                            <button type="SUBMIT" id="revision" class="btn btn-primary" name="revision">Start the questions <i class="fa fa-chevron-right"></i></button>
+                            <br><br>
+                            <h5 style="color: #1A9CCE;">Filter your questions <span class="hide-if-mobile">below</span><span id="questions_matching_criteria"> (<b>3,199
+                            </b> questions found):</span></h5>
+                            <div class="card" style="margin-top:15px;">
+                                <div class="card-header">
+                                    <b>Categories:</b>
+                                </div>
+                                <div class="card-body" style="padding:5px;">
+                                    <ul id="Q-category-selector" class="list-group category-selector"><li class="list-group-item list-item-all"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0.0620925178516% , 0.683017696368%"><div class="custom-control custom-checkbox"> <input type="checkbox" id="Q-category-all" class="custom-control-input" data-category="All" data-subcategory="0" checked=""><label class="custom-control-label" for="Q-category-all">All</label></div><span class="badge badge-light">Attempted 22 of 3,221</span></div></li><li id="list-item-category-1" class="list-group-item list-item-category"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0% , 1.01265822785%"><div class="custom-control custom-checkbox mb-1 "> <input type="checkbox" id="Q-category-1" class="custom-control-input Q-category" data-category="1" data-subcategory="0"><label class="custom-control-label" for="Q-category-1" style="font-size:90%">Cardiology</label></div><span class="badge badge-light">4 of 395</span></div></li><li id="list-item-category-2" class="list-group-item list-item-category"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0% , 1.27118644068%"><div class="custom-control custom-checkbox mb-1 "> <input type="checkbox" id="Q-category-2" class="custom-control-input Q-category" data-category="2" data-subcategory="0"><label class="custom-control-label" for="Q-category-2" style="font-size:90%">Clinical haematology/oncology</label></div><span class="badge badge-light">3 of 236</span></div></li><li id="list-item-category-3" class="list-group-item list-item-category"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0% , 1.34529147982%"><div class="custom-control custom-checkbox mb-1 "> <input type="checkbox" id="Q-category-3" class="custom-control-input Q-category" data-category="3" data-subcategory="0"><label class="custom-control-label" for="Q-category-3" style="font-size:90%">Clinical pharmacology and toxicology</label></div><span class="badge badge-light">3 of 223</span></div></li><li id="list-item-category-4" class="list-group-item list-item-category"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0% , 0.959232613909%"><div class="custom-control custom-checkbox mb-1 "> <input type="checkbox" id="Q-category-4" class="custom-control-input Q-category" data-category="4" data-subcategory="0"><label class="custom-control-label" for="Q-category-4" style="font-size:90%">Clinical sciences</label></div><span class="badge badge-light">4 of 417</span></div></li><li id="list-item-category-5" class="list-group-item list-item-category"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0.675675675676% , 0.675675675676%"><div class="custom-control custom-checkbox mb-1 "> <input type="checkbox" id="Q-category-5" class="custom-control-input Q-category" data-category="5" data-subcategory="0"><label class="custom-control-label" for="Q-category-5" style="font-size:90%">Dermatology</label></div><span class="badge badge-light">1 of 148</span></div></li><li id="list-item-category-6" class="list-group-item list-item-category"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0% , 0%"><div class="custom-control custom-checkbox mb-1 "> <input type="checkbox" id="Q-category-6" class="custom-control-input Q-category" data-category="6" data-subcategory="0"><label class="custom-control-label" for="Q-category-6" style="font-size:90%">Endocrinology</label></div><span class="badge badge-light">0 of 207</span></div></li><li id="list-item-category-7" class="list-group-item list-item-category"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0% , 0.393700787402%"><div class="custom-control custom-checkbox mb-1 "> <input type="checkbox" id="Q-category-7" class="custom-control-input Q-category" data-category="7" data-subcategory="0"><label class="custom-control-label" for="Q-category-7" style="font-size:90%">Gastroenterology</label></div><span class="badge badge-light">1 of 254</span></div></li><li id="list-item-category-8" class="list-group-item list-item-category"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0% , 0.331125827815%"><div class="custom-control custom-checkbox mb-1 "> <input type="checkbox" id="Q-category-8" class="custom-control-input Q-category" data-category="8" data-subcategory="0"><label class="custom-control-label" for="Q-category-8" style="font-size:90%">Infectious diseases and STIs</label></div><span class="badge badge-light">1 of 302</span></div></li><li id="list-item-category-9" class="list-group-item list-item-category"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0% , 1.84049079755%"><div class="custom-control custom-checkbox mb-1 "> <input type="checkbox" id="Q-category-9" class="custom-control-input Q-category" data-category="9" data-subcategory="0"><label class="custom-control-label" for="Q-category-9" style="font-size:90%">Nephrology</label></div><span class="badge badge-light">3 of 163</span></div></li><li id="list-item-category-10" class="list-group-item list-item-category"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0.292397660819% , 0.584795321637%"><div class="custom-control custom-checkbox mb-1 "> <input type="checkbox" id="Q-category-10" class="custom-control-input Q-category" data-category="10" data-subcategory="0"><label class="custom-control-label" for="Q-category-10" style="font-size:90%">Neurology</label></div><span class="badge badge-light">2 of 342</span></div></li><li id="list-item-category-11" class="list-group-item list-item-category"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0% , 0%"><div class="custom-control custom-checkbox mb-1 "> <input type="checkbox" id="Q-category-11" class="custom-control-input Q-category" data-category="11" data-subcategory="0"><label class="custom-control-label" for="Q-category-11" style="font-size:90%">Ophthalmology</label></div><span class="badge badge-light">0 of 62</span></div></li><li id="list-item-category-12" class="list-group-item list-item-category"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0% , 0%"><div class="custom-control custom-checkbox mb-1 "> <input type="checkbox" id="Q-category-12" class="custom-control-input Q-category" data-category="12" data-subcategory="0"><label class="custom-control-label" for="Q-category-12" style="font-size:90%">Psychiatry</label></div><span class="badge badge-light">0 of 94</span></div></li><li id="list-item-category-13" class="list-group-item list-item-category"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0% , 0%"><div class="custom-control custom-checkbox mb-1 "> <input type="checkbox" id="Q-category-13" class="custom-control-input Q-category" data-category="13" data-subcategory="0"><label class="custom-control-label" for="Q-category-13" style="font-size:90%">Respiratory medicine</label></div><span class="badge badge-light">0 of 178</span></div></li><li id="list-item-category-14" class="list-group-item list-item-category"><div class="d-flex w-100 justify-content-between colour-bar" style="background-size:0% , 0%"><div class="custom-control custom-checkbox mb-1 "> <input type="checkbox" id="Q-category-14" class="custom-control-input Q-category" data-category="14" data-subcategory="0"><label class="custom-control-label" for="Q-category-14" style="font-size:90%">Rheumatology</label></div><span class="badge badge-light">0 of 199</span></div></li></ul><input type="hidden" id="Q-categories" name="Q-categories">
+                                </div>
+                            </div>
+                            <div class="card" style="margin-top:15px;">
+                                <div class="card-header">
+                                    <b>Question selection:</b>
+                                </div>
+                                <div class="card-body" style="padding:5px;">
+                                    <select class="custom-select" id="test_type" name="test_type">
+                                        <option value="NEW" selected="selected">Show me new questions only</option>
+                                        <option value="INCORRECT">Repeat questions marked incorrect</option>
+                                    <option value="INCORRECT">All Question</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane  fade" role="tabpanel" id="timedtests">
+                        <br>
+                        <h5 style="color: #1A9CCE;">New timed test</h5>
+                        <br>
+                        <h5>The duration of the test will automatically default to the equivalent amount of time given in the real exam</h5>
+                        <form role="form" class="form-horizontal" method="POST" action="menu.php">
+                            <div class="card" style="margin-top:15px;">
+                                <div class="card-header">
+                                    <b>Number of questions:</b>
+                                </div>
+                                <div class="card-body" style="padding:5px;">  
+                                    <select class="form-control" name="test_num_questions" id="test_num_questions">
+                                        <option value="10" selected="">10 questions</option>
+                                        <option value="20">20 questions</option>
+                                        <option value="30">30 questions</option>
+                                        <option value="40">40 questions</option>
+                                        <option value="50">50 questions</option>
+                                        <option value="60">60 questions</option>
+                                        <option value="70">70 questions</option>
+                                        <option value="80">80 questions</option>
+                                        <option value="90">90 questions</option>
+                                        <option value="100">100 questions</option>
+                                        <option value="125">125 questions</option>
+                                        <option value="150">150 questions</option>
+                                        <option value="180">180 questions</option>
+                                        <option value="200">200 questions</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card" style="margin-top:15px;">
+                                <div class="card-header">
+                                    <b>Length of test (minutes):</b>
+                                </div>
+                                <div class="card-body" style="padding:5px;">
+                                    <input class="form-control" type="text" id="test_num_minutes" name="test_num_minutes" size="3" value="18"> 
+                                </div>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary" name="timed_test">Start the timed test <i class="fa fa-chevron-right"></i></button>
+                        </form>
+                        <br>
+                        <br>
+                        <h5 style="color: #1A9CCE;">Previous timed test</h5>
+                        <br>
+                        <br>
+                        <table id="testtable" class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <td>Date</td>
+                                    <td>Details</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>6th September 19</td>
+                                    <td>
+                                        <b>User generated test</b>
+                                        <br>10 questions over 18 mins
+                                    </td>
+                                    <td>Completed - 0%</td>
+                                    <td>
+                                        <a href="#">Review</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>	
+                    </div>				                
+                </div>
+            </div>
+            <div class="col-md-6">
+                <br>
+                <div id="datediv" class="alert alert-info text-center">
+                    The 13th September 19 exam is <b>7</b> days away
+                </div>			
+                <div class="alert alert-info text-center">
+                    <p><b>Questions</b></p>
+                    <p>Your average score of <b>9.1%</b> puts you on the <b>0th percentile</b> of users who are taking the exam...
+                        <a href="#">more</a>
+                    </p>
+                </div>
+                        <div class="input-group mb-3" style="margin-top:30px;margin-bottom:20px">
+                            <input type="text" class="form-control" name="searchtextplus" placeholder="e.g. test HIV" id="searchtextplus" value="">
+                            <div class="input-group-append">
+                                <button id="gosearchplus" class="btn btn-secondary" type="button">Search textbook / use Passbot</button>
+                            </div>
+                        </div>
+                                <div class="collapse" id="passbotinfo" style="">
+                                  <div class="well">
+                                    The <b>Passbot</b> is a new feature which we are currently trialling. Examples uses include:<br><br>
+                                    You want to open the textbook and <b>search for <i>Chlamydia</i></b>:
+                                    <ul>
+                                        <li>Simply type "<b>chlamydia</b>" as before, the textbook will open</li>
+                                    </ul>
+                                    <br>
+                                    You want to be <b>tested on HIV</b>:
+                                    <ul>
+                                        <li>Type "<b>test hiv</b>", the Passbot will be activated and a box will open allowing you to practice questions to do with HIV</li>
+                                    </ul>
+                                    <br>
+                                    You've got an <b>anatomy exam</b> coming up:
+                                    <ul>
+                                        <li>You could use the tree menu and individually select each anatomy box under the various organ systems
+                                        </li><li>Alternatively, type "<b>test anatomy</b>", the Passbot will be activated and a box will open allowing you to practice all our anatomy questions</li>
+                                    </ul>
+                                    <br>
+                                  </div>
+                                </div>
+                                
+                                     
+                        
+            
+                     </div>
+        </div>
+    </section>
+
+        
+
+    <!--footer-->
+    <section class="section section_footer">
+        <div class="footer-wrapper" style="background-color: #262626;">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br>
+                            <a class="navbar-brand" href="#">
+                                <span class="navbar-brand_med">Prep</span>
+                                <span class="navbar-brand_prep">sys</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                        <br>
+                        <p class="text-muted">© 2019 Medprep</p>
+                            <a class="text-muted unstyled" target="_blank" href="#">Terms and conditions</a>
+                            <br>
+                            <a class="text-muted" target="_blank" href=#">Privacy policy</a>
+                        </div>
+                        <div class="col-md-3">
+                            <br>
+                            <ul class="list-unstyled text-small">
+                                <li class="text-muted">Medprep</li>
+                                <li class="text-muted">71-75 Shelton Street</li>
+                                <li class="text-muted">Covent Garden</li>
+                                <li class="text-muted">London</li>
+                                <li class="text-muted">WC2H 9JQ</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <br>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">About PassMedicine</a></li>
+                                <li><a class="text-muted" href="#">Contact us</a></li>
+                                <li><a class="text-muted" href="#">Forgot password?</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <br>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">MRCP UK Examinations guidance</a></li>
+                                <li><a class="text-muted" href="#">MRCGP AKT examination guidance</a></li>
+                                <li><a class="text-muted" href="#">MSRA exam guidance</a></li>
+                                <li><a class="text-muted" href="#">UK Medical School Alliance</a></li>
+                                <li><a class="text-muted" href="#">SJT guidance</a></li>
+                                <li><a class="text-muted" href="#">PSA guidance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
