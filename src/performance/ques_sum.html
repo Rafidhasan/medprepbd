@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>PrepsyspBD</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <span class="navbar-brand_med">Prep</span>
+                <span class="navbar-brand_prep">sys</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Review
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Question</a>
+                            <a class="dropdown-item" href="#">Key Concepts</a>
+                            <a class="dropdown-item" href="#">Facts</a>
+                            <a class="dropdown-item" href="#">Open The Text Book</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Performace
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <h6 class="dropdown-header">Question</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Summery</a>
+                            <a class="dropdown-item" href="#">By Category</a>
+                            <a class="dropdown-item" href="#">Overtime</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Facts</h6>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Summery</a>
+                            <a class="dropdown-item" href="#">By Category</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Q&A</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="#">FAQs</a>
+                            <a class="dropdown-item" href="#">Contact us</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                My Account
+                                <br>
+                                <span class="text-muted">rafidahsan698@gmail.com</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" href="../index.html">Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--ques_sum details section-->
+    <section class="section section_ques_sum_details container my-5">
+        <div class="row">
+            <div class="col-md-3">
+                <h4 class="nav-header">Questions</h4>
+                <ul class="nav nav-pills  nav-stacked">
+                    <li class="active">
+                        <a class="ques_sum_a" href="#">Question summary</a>
+                    </li>
+                    <li>
+                        <a class="ques_sum_a"  href="#">Performance by category</a>
+                    </li>
+                    <li>
+                        <a class="ques_sum_a"  href="#">Performance over time</a>
+                    </li>	                
+                </ul>   
+            </div>
+            <div id="questionsummary" class="col-md-8">
+                <h3 class="text-info">Performance - question summary</h3>
+                <br>			 
+                Your average score is <b>9.1%</b> after answering 22 questions. The average score of registered users is 54.6%. <br><br><br>Your score of 9.1% puts you on the <b>0th percentile</b> of registered users. The histogram below shows the scores of other users.<br>		
+                <div class="contaienr">
+                    <canvas id="myCanvas" height="300" width="600"></canvas>
+                </div>
+                
+               <script>
+                   var c=document.getElementById('myCanvas');
+                   var ctx=c.getContext('2d');
+                            ctx.fillStyle='#EEEEEE';
+                            ctx.fillRect(15, 65, 170, 200);
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(15, 262, 5, 3);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(20, 255, 5, 10);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(25, 259, 5, 6);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(30, 253, 5, 12);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(35, 253, 5, 12);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(40, 253, 5, 12);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(45, 253, 5, 12);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(50, 248, 5, 17);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(55, 246, 5, 19);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(60, 244, 5, 21);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(65, 240, 5, 25);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(70, 223, 5, 42);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(75, 226, 5, 39);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(80, 212, 5, 53);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff0000';
+                            ctx.fillRect(85, 208, 5, 57);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff3300';
+                            ctx.fillRect(90, 206, 5, 59);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff3300';
+                            ctx.fillRect(95, 190, 5, 75);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff3300';
+                            ctx.fillRect(100, 179, 5, 86);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff3300';
+                            ctx.fillRect(105, 194, 5, 71);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff3300';
+                            ctx.fillRect(110, 175, 5, 90);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff3300';
+                            ctx.fillRect(115, 147, 5, 118);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff3300';
+                            ctx.fillRect(120, 163, 5, 102);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff3300';
+                            ctx.fillRect(125, 159, 5, 106);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff6600';
+                            ctx.fillRect(130, 133, 5, 132);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff6600';
+                            ctx.fillRect(135, 143, 5, 122);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff6600';
+                            ctx.fillRect(140, 130, 5, 135);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff6600';
+                            ctx.fillRect(145, 112, 5, 153);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff6600';
+                            ctx.fillRect(150, 123, 5, 142);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff6600';
+                            ctx.fillRect(155, 103, 5, 162);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff6600';
+                            ctx.fillRect(160, 128, 5, 137);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff9900';
+                            ctx.fillRect(165, 117, 5, 148);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff9900';
+                            ctx.fillRect(170, 112, 5, 153);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff9900';
+                            ctx.fillRect(175, 100, 5, 165);
+                            
+                            
+                            
+                            ctx.fillStyle='#ff9900';
+                            ctx.fillRect(180, 122, 5, 143);
+                            
+                            
+                            
+                            ctx.fillStyle='#ffcc00';
+                            ctx.fillRect(185, 85, 5, 180);
+                            
+                            
+                            
+                            ctx.fillStyle='#ffcc00';
+                            ctx.fillRect(190, 107, 5, 158);
+                            
+                            
+                            
+                            ctx.fillStyle='#ffcc00';
+                            ctx.fillRect(195, 110, 5, 155);
+                            
+                            
+                            
+                            ctx.fillStyle='#ffcc00';
+                            ctx.fillRect(200, 119, 5, 146);
+                            
+                            
+                            
+                            ctx.fillStyle='#ffff00';
+                            ctx.fillRect(205, 105, 5, 160);
+                            
+                            
+                            
+                            ctx.fillStyle='#ffff00';
+                            ctx.fillRect(210, 131, 5, 134);
+                            
+                            
+                            
+                            ctx.fillStyle='#ffff00';
+                            ctx.fillRect(215, 133, 5, 132);
+                            
+                            
+                            
+                            ctx.fillStyle='#ffff00';
+                            ctx.fillRect(220, 134, 5, 131);
+                            
+                            
+                            
+                            ctx.fillStyle='#ccff00';
+                            ctx.fillRect(225, 137, 5, 128);
+                            
+                            
+                            
+                            ctx.fillStyle='#ccff00';
+                            ctx.fillRect(230, 137, 5, 128);
+                            
+                            
+                            
+                            ctx.fillStyle='#ccff00';
+                            ctx.fillRect(235, 139, 5, 126);
+                            
+                            
+                            
+                            ctx.fillStyle='#ccff00';
+                            ctx.fillRect(240, 160, 5, 105);
+                            
+                            
+                            
+                            ctx.fillStyle='#99ff00';
+                            ctx.fillRect(245, 167, 5, 98);
+                            
+                            
+                            
+                            ctx.fillStyle='#99ff00';
+                            ctx.fillRect(250, 188, 5, 77);
+                            
+                            
+                            
+                            ctx.fillStyle='#99ff00';
+                            ctx.fillRect(255, 173, 5, 92);
+                            
+                            
+                            
+                            ctx.fillStyle='#99ff00';
+                            ctx.fillRect(260, 187, 5, 78);
+                            
+                            
+                            
+                            ctx.fillStyle='#66ff00';
+                            ctx.fillRect(265, 193, 5, 72);
+                            
+                            
+                            
+                            ctx.fillStyle='#66ff00';
+                            ctx.fillRect(270, 216, 5, 49);
+                            
+                            
+                            
+                            ctx.fillStyle='#66ff00';
+                            ctx.fillRect(275, 202, 5, 63);
+                            
+                            
+                            
+                            ctx.fillStyle='#66ff00';
+                            ctx.fillRect(280, 201, 5, 64);
+                            
+                            
+                            
+                            ctx.fillStyle='#66ff00';
+                            ctx.fillRect(285, 213, 5, 52);
+                            
+                            
+                            
+                            ctx.fillStyle='#66ff00';
+                            ctx.fillRect(290, 208, 5, 57);
+                            
+                            
+                            
+                            ctx.fillStyle='#66ff00';
+                            ctx.fillRect(295, 216, 5, 49);
+                            
+                            
+                            
+                            ctx.fillStyle='#33ff00';
+                            ctx.fillRect(300, 216, 5, 49);
+                            
+                            
+                            
+                            ctx.fillStyle='#33ff00';
+                            ctx.fillRect(305, 226, 5, 39);
+                            
+                            
+                            
+                            ctx.fillStyle='#33ff00';
+                            ctx.fillRect(310, 234, 5, 31);
+                            
+                            
+                            
+                            ctx.fillStyle='#33ff00';
+                            ctx.fillRect(315, 237, 5, 28);
+                            
+                            
+                            
+                            ctx.fillStyle='#33ff00';
+                            ctx.fillRect(320, 237, 5, 28);
+                            
+                            
+                            
+                            ctx.fillStyle='#33ff00';
+                            ctx.fillRect(325, 250, 5, 15);
+                            
+                            
+                            
+                            ctx.fillStyle='#33ff00';
+                            ctx.fillRect(330, 251, 5, 14);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(335, 247, 5, 18);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(340, 247, 5, 18);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(345, 257, 5, 8);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(350, 253, 5, 12);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(355, 253, 5, 12);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(360, 257, 5, 8);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(365, 254, 5, 11);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(370, 260, 5, 5);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(375, 263, 5, 2);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(380, 262, 5, 3);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(385, 262, 5, 3);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(390, 261, 5, 4);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(395, 264, 5, 1);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(400, 265, 5, 0);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(405, 264, 5, 1);
+                            
+                            
+                            
+                            ctx.fillStyle='#00ff00';
+                            ctx.fillRect(410, 262, 5, 3);
+                            
+                            
+                                            ctx.fillStyle='#000';
+                            ctx.fillRect(15,265,400,1);
+                            ctx.fillRect(15,65,1,200);
+                                                ctx.fillRect(15, 265,1, 5);
+                        
+                                                    ctx.fillRect(65, 265,1, 5);
+                        
+                                                    ctx.fillRect(115, 265,1, 5);
+                        
+                                                    ctx.fillRect(165, 265,1, 5);
+                        
+                                                    ctx.fillRect(215, 265,1, 5);
+                        
+                                                    ctx.fillRect(265, 265,1, 5);
+                        
+                                                    ctx.fillRect(315, 265,1, 5);
+                        
+                                                    ctx.fillRect(365, 265,1, 5);
+                        
+                                                    ctx.fillRect(415, 265,1, 5);
+                        
+                                            
+                        ctx.font="11px Arial";
+                                            
+                            ctx.fillText("20%",10,282);
+                                                
+                            ctx.fillText("30%",60,282);
+                                                
+                            ctx.fillText("40%",110,282);
+                                                
+                            ctx.fillText("50%",160,282);
+                                                
+                            ctx.fillText("60%",210,282);
+                                                
+                            ctx.fillText("70%",260,282);
+                                                
+                            ctx.fillText("80%",310,282);
+                                                
+                            ctx.fillText("90%",360,282);
+                                                
+                            ctx.fillText("100%",410,282);
+                            
+                       
+                    
+            </script>
+               
+               
+           <br>	
+           On average 48% of candidates pass the MRCP Part 1 (source: RCP). The area shaded grey represents the 52% of candidates who would fail if passmedicine was representative of the exam. The histogram and other scoring data are updated on a daily basis.  
+                         
+            </div>
+        </div>
+    </section>
+        
+
+    <!--footer-->
+    <section class="section section_footer">
+        <div class="footer-wrapper" style="background-color: #262626; overflow-x: hidden;">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br>
+                            <a class="navbar-brand" href="#">
+                                <span class="navbar-brand_med">Prep</span>
+                                <span class="navbar-brand_prep">sys</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                        <br>
+                        <p class="text-muted">© 2019 Medprep</p>
+                            <a class="text-muted unstyled" target="_blank" href="#">Terms and conditions</a>
+                            <br>
+                            <a class="text-muted" target="_blank" href=#">Privacy policy</a>
+                        </div>
+                        <div class="col-md-3">
+                            <br>
+                            <ul class="list-unstyled text-small">
+                                <li class="text-muted">Medprep</li>
+                                <li class="text-muted">71-75 Shelton Street</li>
+                                <li class="text-muted">Covent Garden</li>
+                                <li class="text-muted">London</li>
+                                <li class="text-muted">WC2H 9JQ</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <br>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">About PassMedicine</a></li>
+                                <li><a class="text-muted" href="#">Contact us</a></li>
+                                <li><a class="text-muted" href="#">Forgot password?</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <br>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">MRCP</a></li>
+                                <li><a class="text-muted" href="#">MRCGP</a></li>
+                                <li><a class="text-muted" href="#">MSRA</a></li>
+                                <li><a class="text-muted" href="#">UK</a></li>
+                                <li><a class="text-muted" href="#">SJT</a></li>
+                                <li><a class="text-muted" href="#">PSA</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
