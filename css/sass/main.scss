@@ -287,18 +287,22 @@ question summery
 }
 
 
+
+
 /*
-==============================
-Performace by Category
-=============================
+=====================
+    Start Question
+======================
 */
 
-@media only screen and (max-width: 1013px) {
-    #chart_div {
+.question_header {
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 5px;
 
+    &-col {
+        height: 50px;
+        line-height: 50px; 
     }
 }
-
-
 
 

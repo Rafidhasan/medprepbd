@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>PrepsyspBD</title>
+    <!--chart js-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <span class="navbar-brand_med">Prep</span>
+                <span class="navbar-brand_prep">sys</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" href="dashboard.html">Back to Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--question section-->
+    <section class="section section_question container">
+        <div class="row">
+            <div class="col-lg-7" style="margin-bottom:50px;">
+                <div class="question_header">
+                    <div class="row">
+                         <div class="col-2">
+                            <button type="button" class="btn btn-link" style="padding-left:0;">
+                            <i class="fa fa-arrow-circle-left fa-2x"></i></button>
+                        </div>
+                         <div class="col-4 question_header-col">
+                            <span class="small_text_mobile">1 of 100</span>
+                        </div>
+    `                   <div class="col-2 question_header-col"></div>
+                            
+                        <div class="col-1 question_header-col">
+                            <button id="flagbutton" type="button" class="btn btn-link">
+                                <i class="fa fa-flag-o" style="color:#888;"></i>
+                            </button>
+                        </div>
+                        <div class="col-2" style="text-align:right">
+                            <button type="button" class="btn btn-link" id="next_question" style="padding-right:0;">
+                                <i class="fa fa-arrow-circle-right fa-2x"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question_body">
+                    A 21-year-old woman who is 16 weeks pregnant present with worsening acne which she is finding distressing. She is currently using topical benzyl peroxide with limited effect. On examination there is widespread non-inflammatory lesions and pustules on her face. What is the most appropriate next management step?<br><br>
+                        <div class="list-group">
+                            <a href="#" style="background-image: url(https://d32xxyeh8kfs8k.cloudfront.net/css/images/greybar.png); background-repeat: repeat-y; background-size: 0;" data-optionnum="1" class="list-group-item list-group-item-action sba-option justify-content-between d-flex align-items-center">
+                                <div class="custom-control custom-radio" style="font-weight: normal;">
+                                    <input type="radio" class="custom-control-input" style="margin-right:20px" value="1">
+                                    <label class="custom-control-label" for="optionsRadio1">Oral trimethoprim</label>
+                                </div>
+                                <span class="score-badge badge badge-pill badge-default" style="display:hidden;"></span>
+                            </a>
+                            <a href="#" style="background-image: url(https://d32xxyeh8kfs8k.cloudfront.net/css/images/greybar.png); background-repeat: repeat-y; background-size: 0;" data-optionnum="1" class="list-group-item list-group-item-action sba-option justify-content-between d-flex align-items-center">
+                                <div class="custom-control custom-radio" style="font-weight: normal;">
+                                    <input type="radio" class="custom-control-input" style="margin-right:20px" value="1">
+                                    <label class="custom-control-label" for="optionsRadio1">Oral trimethoprim</label>
+                                </div>
+                                <span class="score-badge badge badge-pill badge-default" style="display:hidden;"></span>
+                            </a>
+                            <a href="#" style="background-image: url(https://d32xxyeh8kfs8k.cloudfront.net/css/images/greybar.png); background-repeat: repeat-y; background-size: 0;" id="BOFoption3" data-optionnum="3" class="list-group-item list-group-item-action sba-option justify-content-between d-flex align-items-center">
+                                <div class="custom-control custom-radio" style="font-weight: normal;">
+                                    <input type="radio" class="custom-control-input" name="optionsRadio" id="optionsRadio3" style="margin-right:20px" value="3">
+                                    <label class="custom-control-label" for="optionsRadio3">Oral erythromycin</label>
+                                </div>
+                                <span id="popularity_badge3" class="score-badge badge badge-pill badge-default" style="display:hidden;"></span>
+                            </a>
+                            <a href="#" style="background-image: url(https://d32xxyeh8kfs8k.cloudfront.net/css/images/greybar.png); background-repeat: repeat-y; background-size: 0;" id="BOFoption4" data-optionnum="4" class="list-group-item list-group-item-action sba-option justify-content-between d-flex align-items-center"><div class="custom-control custom-radio" style="font-weight: normal;"><input type="radio" class="custom-control-input" name="optionsRadio" id="optionsRadio4" style="margin-right:20px" value="4"><label class="custom-control-label" for="optionsRadio4">Topical retinoid</label></div><span id="popularity_badge4" class="score-badge badge badge-pill badge-default" style="display:hidden;"></span></a><a href="#" style="background-image: url(https://d32xxyeh8kfs8k.cloudfront.net/css/images/greybar.png); background-repeat: repeat-y; background-size: 0;" id="BOFoption5" data-optionnum="5" class="list-group-item list-group-item-action sba-option justify-content-between d-flex align-items-center"><div class="custom-control custom-radio" style="font-weight: normal;"><input type="radio" class="custom-control-input" name="optionsRadio" id="optionsRadio5" style="margin-right:20px" value="5"><label class="custom-control-label" for="optionsRadio5">Oral doxycycline</label></div><span id="popularity_badge5" class="score-badge badge badge-pill badge-default" style="display:hidden;"></span></a></div><br><button id="submit_answer" class="btn btn-primary">Submit answer</button></div>
+
+                    <div id="div_avoid_reflow_col1" style="display:none;">
+                        <div id="div_question_rating"></div>
+                        <div id="div_post_question" style=" overflow: hidden; margin-top: 20px;">=
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-outline-secondary question_rating" data-rating="1"><i class="fa fa-thumbs-up" style="color:green"></i></button>
+                                <button type="button" class="btn btn-outline-secondary question_rating" data-rating="0"><i class="fa fa-thumbs-down" style="color:red"></i></button>
+                                <button type="button" id="discuss_question" class="btn btn-outline-secondary"><i class="fa fa-comment"></i> Discuss <span id="comment_count"></span></button>
+                                <button type="button" id="improve_question" class="btn btn-outline-secondary">Improve</button>
+                            </div>
+                            <div id="div_discuss_question" class="discuss_improve_css">
+                                <h5 class="text-warning">Question discussion</h5>
+                                <div id="div_discuss_question_content"></div>
+                            </div>
+                            <div id="div_improve_question" class="discuss_improve_css">
+                                <h5 class="text-warning">Improve this question</h5>
+                                What is the main problem with this question?<br>
+                                <button class="btn btn-outline-info btn-sm suggestion" data-suggestion="Not relevant for the exam: "><i class="fa fa-plus"></i> Not relevant for the exam</button> 
+                                <button class="btn btn-outline-info btn-sm suggestion" data-suggestion="Explanation not adequate: "><i class="fa fa-plus"></i> Explanation not adequate</button> 
+                                <button class="btn btn-outline-info btn-sm suggestion" data-suggestion="Wrong category: "><i class="fa fa-plus"></i> Wrong category</button> 
+                                <button class="btn btn-outline-info btn-sm suggestion" data-suggestion="Not in keeping with current guidelines: "><i class="fa fa-plus"></i> Not in keeping with current guidelines</button> 
+                                <button class="btn btn-outline-info btn-sm suggestion" data-suggestion="Spelling/grammar problems: "><i class="fa fa-plus"></i> Spelling/grammar problems</button> 
+
+                                <textarea class="form-control" id="improve_textarea" rows="4"></textarea>
+                                <button class="btn btn-warning" id="submit_improve" type="button">Submit suggestions</button>
+                            </div>
+                            <br><br>
+                            <button class=" post_question_next_question btn btn-primary float-right">Next question <i class="fa fa-chevron-right"></i></button>
+                        </div>           
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+            <div class="col-lg-3">
+                <div class="card card-outline-warning mb-3 text-center mt-3" style="background-color: rgb(252, 248, 227); opacity: 0.5;">
+                    <div class="card-header">Score: <b>0%</b><br></div>
+                    <div class="card-body"><table class="dashboard-table"><tbody><tr><td align="center" width="40"><b>1</b></td><td width="40">-</td><td></td></tr><tr><td align="center" width="40"><a href="#" class="move_to_question" data-destination="1">2</a></td><td width="40">-</td><td></td></tr><tr><td align="center" width="40"><a href="#" class="move_to_question" data-destination="2">3</a></td><td width="40">-</td><td></td></tr><tr><td align="center" width="40"><a href="#" class="move_to_question" data-destination="3">4</a></td><td width="40">-</td><td></td></tr></tbody></table></div>
+                </div>  
+            </div>
+        </div>
+    </section>
+        
+
+    <!--footer-->
+    <section class="section section_footer">
+        <div class="footer-wrapper" style="background-color: #262626; overflow-x: hidden;">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br>
+                            <a class="navbar-brand" href="#">
+                                <span class="navbar-brand_med">Prep</span>
+                                <span class="navbar-brand_prep">sys</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                        <br>
+                        <p class="text-muted">© 2019 Medprep</p>
+                            <a class="text-muted unstyled" target="_blank" href="#">Terms and conditions</a>
+                            <br>
+                            <a class="text-muted" target="_blank" href="#">Privacy policy</a>
+                        </div>
+                        <div class="col-md-3">
+                            <br>
+                            <ul class="list-unstyled text-small">
+                                <li class="text-muted">Medprep</li>
+                                <li class="text-muted">71-75 Shelton Street</li>
+                                <li class="text-muted">Covent Garden</li>
+                                <li class="text-muted">London</li>
+                                <li class="text-muted">WC2H 9JQ</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <br>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">About PassMedicine</a></li>
+                                <li><a class="text-muted" href="#">Contact us</a></li>
+                                <li><a class="text-muted" href="#">Forgot password?</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <br>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">MRCP</a></li>
+                                <li><a class="text-muted" href="#">MRCGP</a></li>
+                                <li><a class="text-muted" href="#">MSRA</a></li>
+                                <li><a class="text-muted" href="#">UK</a></li>
+                                <li><a class="text-muted" href="#">SJT</a></li>
+                                <li><a class="text-muted" href="#">PSA</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
